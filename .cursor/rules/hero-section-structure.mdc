@@ -1,0 +1,41 @@
+---
+description: Hero section file structure and organization
+globs: src/app/sections/Hero/**/*
+alwaysApply: false
+---
+
+# Hero Section File Structure
+
+The Hero section files are organized in `src/app/sections/Hero/` with the following structure:
+
+## Directory Structure
+
+```
+src/app/sections/Hero/
+  ├── landing-hero.tsx          # Main hero section component
+  ├── background/
+  │   └── AbstractBackground.tsx  # Abstract background component
+  └── TextAnimations/
+      └── VerticalText.tsx        # Vertical text animation component
+```
+
+## Import Paths
+
+When importing Hero section components, use these paths:
+
+```typescript
+// Main hero component
+import LandingHero from "@/app/sections/Hero/landing-hero";
+
+// Background component
+import AbstractBackground from "@/app/sections/Hero/background/AbstractBackground";
+
+// Text animations
+import VerticalText from "@/app/sections/Hero/TextAnimations/VerticalText";
+```
+
+## Notes
+
+- The Hero section is located in `sections/Hero/` (capital H)
+- Sub-components are organized in subdirectories (`background/`, `TextAnimations/`)
+- Always use the full path `@/app/sections/Hero/` when importing

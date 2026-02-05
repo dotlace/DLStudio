@@ -1,5 +1,32 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Kola";
+  src: url("/Fonts/Kola/Kola-Regular.woff2") format("woff2"),
+    url("/Fonts/Kola/Kola-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RX100";
+  src: url("/Fonts/RX100/RX100-Regular.woff2") format("woff2"),
+    url("/Fonts/RX100/RX100-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ranade";
+  src: url("/Fonts/Ranade/Ranade-Regular.woff2") format("woff2"),
+    url("/Fonts/Ranade/Ranade-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,6 +37,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-orbitron: var(--font-orbitron);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +48,77 @@
 }
 
 body {
-  background: var(--background);
+  background: #ffffff;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-orbitron {
+  font-family: var(--font-orbitron);
+}
+
+.font-kola {
+  font-family: "Kola", sans-serif;
+}
+
+.font-rx100 {
+  font-family: "RX100", sans-serif;
+}
+
+.font-ranade {
+  font-family: "Ranade", sans-serif;
+}
+
+/* Ensure images and media are responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scroll on mobile */
+* {
+  box-sizing: border-box;
+}
+
+/* Premium smooth animations */
+@layer utilities {
+  .premium-transition {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better text rendering for premium feel */
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Shutter animation for menu letters */
+@keyframes shutter {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-4px) rotate(1deg);
+  }
 }
