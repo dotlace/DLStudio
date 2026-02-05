@@ -53,11 +53,11 @@ const Ordinary = () => {
 
       <div className="sticky top-0 min-h-screen flex items-center justify-center isolate">
         <div className="relative w-full max-w-[1200px] px-6">
-          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 mx-auto h-[55vh] w-[55vh] bg-white" />
+          <div className="absolute inset-x-0 top-1/2 -translate-y-[40%] mx-auto h-[55vh] w-[55vh] bg-white" />
 
           <div
             ref={textRef}
-            className="relative z-10 mt-24 mx-auto w-full max-w-[95vw] text-center text-[12vw] sm:text-[10vw] leading-[0.85] font-semibold tracking-tight text-white mix-blend-difference"
+            className="relative z-10 mt-32 mx-auto w-full max-w-[98vw] text-center text-[14vw] sm:text-[12vw] leading-[0.85] font-semibold tracking-tight text-white mix-blend-difference"
           >
             <div className="whitespace-nowrap">From ordinary</div>
             <div className="whitespace-nowrap">to extraordinary</div>
